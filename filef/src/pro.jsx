@@ -11,7 +11,7 @@ function Pro(){
                  console.log("got token=",tok)
                  if(tok){
                      try{
-                         const response=await fetch("https://filehandleb4.vercel.app/Protected",{
+                         const response=await fetch("https://filehandleb.vercel.app/Protected",{
                              method:"GET",
                              headers:{
                                  "Authorization": `Bearer ${tok}`, 
