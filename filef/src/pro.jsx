@@ -7,7 +7,7 @@ function Pro(){
     
    async function data(){   
                      try{
-                         const response=await fetch("https://filehandleb.vercel.app/Protected",{
+                         const response=await fetch("https://filehandleb6.vercel.app/Protected",{
                              method:"GET",
                              credentials: "include",
                              headers: { "Content-Type": "application/json" }
