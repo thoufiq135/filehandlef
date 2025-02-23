@@ -24,7 +24,7 @@ const [check,setcheck]=useState(false)
             setloader(true)
             try{
                 console.log("data came=",smail,spass,sname)
-                const response=await fetch("https://filehandleb6.vercel.app/Signup",{
+                const response=await fetch("http://localhost:5000/Signup",{
                    
                 method:"POST",
                 body:JSON.stringify({
@@ -65,7 +65,7 @@ useEffect(()=>{
             setloader(true)
             try{
                 console.log("data came=",lmail,lpass)
-                const response=await fetch("https://filehandleb6.vercel.app/Login",{
+                const response=await fetch("http://localhost:5000/Login",{
                    
                 method:"POST",
                 body:JSON.stringify({
