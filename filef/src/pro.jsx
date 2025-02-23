@@ -5,18 +5,12 @@ function Pro(){
     const[warning,setwarning]=useState(false)
     const[display,setdisplay]=useState(false)
     
-   async function data(){
-       
-                 const tok=localStorage.getItem("token")
-                 console.log("got token=",tok)
-                 if(tok){
+   async function data(){   
                      try{
-                         const response=await fetch("https://filehandleb.vercel.app/Protected",{
+                         const response=await fetch("http://localhost:2000/Protected",{
                              method:"GET",
-                             headers:{
-                                 "Authorization": `Bearer ${tok}`, 
-                                 "Content-Type": "application/json"                         
-                             }
+                             credentials: "include",
+                             headers: { "Content-Type": "application/json" }
                          })
                          const r = await response.json()
                          console.log(r)
@@ -30,11 +24,7 @@ function Pro(){
                          }
                      }  catch(e){
                          console.log("pro fetch error",e)
-                     }          
-                 }
-             
-        
-
+                     }      
     }
 
     return(

@@ -24,7 +24,7 @@ const [check,setcheck]=useState(false)
             setloader(true)
             try{
                 console.log("data came=",smail,spass,sname)
-                const response=await fetch("https://filehandleb.vercel.app/Signup",{
+                const response=await fetch("http://localhost:2000/Signup",{
                    
                 method:"POST",
                 body:JSON.stringify({
@@ -65,7 +65,7 @@ useEffect(()=>{
             setloader(true)
             try{
                 console.log("data came=",lmail,lpass)
-                const response=await fetch("https://filehandleb.vercel.app/Login",{
+                const response=await fetch("http://localhost:2000/Login",{
                    
                 method:"POST",
                 body:JSON.stringify({
@@ -74,15 +74,18 @@ useEffect(()=>{
                 }),
                 headers:{
                     "Content-Type": "application/json"
-                }
+                },
+                credentials:"include"
                 
             })
             const r= await response.json()
             if(response.status===401){
+                console.log("responde=",r)
                 setlwarn(true)
                 setltransport(false)
             }else{
-                localStorage.setItem("token",r)
+                console.log("responde=",r)
+                
                 setlwarn(false)
                 setltransport(true)
             }
