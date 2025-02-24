@@ -11,7 +11,7 @@ function Pro(){
     
    async function data(){   
                      try{
-                         const response=await fetch("http://localhost:2000/Protected",{
+                         const response=await fetch("https://filehandleb-final1.vercel.app/Protected",{
                              method:"GET",
                              credentials: "include",
                              headers: { "Content-Type": "application/json" }
@@ -33,7 +33,7 @@ function Pro(){
     }
 async function fetchcookie() {
     try{
-        const coore=await fetch("http://localhost:2000/Protected/fetchcookie",{
+        const coore=await fetch("https://filehandleb-final1.vercel.app/Protected/fetchcookie",{
             method:"GET",
             credentials:"include"
         })
