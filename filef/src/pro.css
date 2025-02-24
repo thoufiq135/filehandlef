@@ -54,3 +54,8 @@ button {
        top: 0;
        left: 0;
    }
+   #input{
+       height:10vh;
+       width:80vw;
+       margin-left: 10vw;
+   }

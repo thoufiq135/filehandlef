@@ -17,6 +17,7 @@ const [ltransport,setltransport]=useState(false)
 const [check,setcheck]=useState(false)
 
 
+
     // ------------------------------------------------------------------------signup-----------------------------------------------------
    useEffect(()=>{
     async function signuphandle(){
@@ -85,7 +86,8 @@ useEffect(()=>{
                 setltransport(false)
             }else{
                 console.log("responde=",r)
-                
+               
+              
                 setlwarn(false)
                 setltransport(true)
             }
@@ -95,7 +97,9 @@ useEffect(()=>{
             }finally {
                 setloader(false);  
             }
+       
         }
+    
 
     }   
     loginhandle()
